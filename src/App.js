@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 // Pages
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/contatos/vivo/whats" element={<Contact />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </div>

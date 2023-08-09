@@ -18,7 +18,6 @@ const Contact = () => {
           <p>{doc.endereco}</p>
           <p>{doc.city}</p>
           <p>{doc.numberResidencia}</p>
-          
         </div>
       ))}
     </div>

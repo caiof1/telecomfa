@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 // Hooks
 import { useState, useEffect, useRef } from "react";
 
-const Carousel = ({setPlano}) => {
-  const [width, setWidth] = useState(0)
+const Carousel = ({ setPlano, documents }) => {
+  const [width, setWidth] = useState(0);
 
   const carousel = useRef();
   useEffect(() => {
@@ -27,128 +27,29 @@ const Carousel = ({setPlano}) => {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <a href="#form" onClick={() => setPlano('Internet 300 MB + netflix padrão')} className={styles.link}>
-              <button className={styles.btn}>Solicitar contato</button>
-            </a>
-          </div>{" "}
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>{" "}
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>{" "}
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>
-          <div className={styles.product}>
-            <div className={styles.title_product}>
-              <span>Internet 300 MB + netflix padrão</span>
-            </div>
-            <div className={styles.value}>
-              <span>R$ 159,99</span>
-            </div>
-            <div className={styles.description}>
-              <span>
-                300 download/ 150 upload - Para CPF - Fidelidade de 1 ano - Sem
-                taxa de instalação - Pagamento só depois de 30 dias
-              </span>
-            </div>
-            <button className={styles.btn}>Solicitar contato</button>
-          </div>
+          <>
+          {documents &&
+            documents.map((doc) => (
+              <div className={styles.product}>
+                <div className={styles.title_product}>
+                  <span>{doc.name}</span>
+                </div>
+                <div className={styles.value}>
+                  <span>R$ {doc.value}</span>
+                </div>
+                <div className={styles.description}>
+                  <span>{doc.description}</span>
+                </div>
+                <a
+                  href="#form"
+                  onClick={() => setPlano(doc.name)}
+                  className={styles.link}
+                >
+                  <button className={styles.btn}>Solicitar contato</button>
+                </a>
+              </div>
+            ))}{" "}
+          </>
         </motion.div>
       </motion.div>
     </div>

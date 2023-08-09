@@ -1,0 +1,27 @@
+.footer {
+    margin-top: 45px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .redes {
+        margin-bottom: 15px;
+    }
+
+    .redes a {
+        margin: 0 10px;
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .redes a i:hover {
+        color: #000;
+        transition: .2s linear;
+    }
+
+    .dev {
+        color: #fff;
+    }
+}

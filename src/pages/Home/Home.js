@@ -10,6 +10,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import { useState } from "react";
 import { useFetchCEP } from "../../hooks/useFetchCEP";
 import { useInsertClient } from "../../hooks/useInsertClient";
+import { useFetchPlanos } from "../../hooks/useFetchPlanos";
 
 const Home = () => {
   const [name, setName] = useState();
@@ -27,6 +28,9 @@ const Home = () => {
   const {searchCEP} = useFetchCEP()
 
   const { insertOrder, loading, acess } = useInsertClient('clients')
+
+  const {documents} = useFetchPlanos('planosCPF')
+  const {documents: planosPJ} = useFetchPlanos('planosCNPJ')
 
   const handleCepChange = async (e) => {
     setCEP(e.target.value)
@@ -154,7 +158,7 @@ const Home = () => {
         <div className={styles.title_cpf}>
           <h2>Nossos planos para CPF</h2>
         </div>
-        <Carousel setPlano={setPlano} />
+        <Carousel setPlano={setPlano} documents={documents} />
       </section>
 
       <section className={styles.last_banner}>
@@ -168,7 +172,7 @@ const Home = () => {
         <div className={styles.title_cpf}>
           <h2>Nossos planos para CNPJ</h2>
         </div>
-        <Carousel setPlano={setPlano} />
+        <Carousel setPlano={setPlano} documents={planosPJ} />
       </section>
 
       <form onSubmit={handleSubmit} className={styles.form} id="form">
