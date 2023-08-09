@@ -1,0 +1,538 @@
+@keyframes carrouselContact {
+    0% {
+        transform: translateX(0);
+    } 5% {
+        transform: translateX(-50%);
+    } 10% {
+        transform: translateX(-50%);
+    } 15% {
+        transform: translateX(-50%);
+    } 20% {
+        transform: translateX(-50%);
+    } 25% {
+        transform: translateX(-50%);
+    } 30% {
+        transform: translateX(-50%);
+    } 35% {
+        transform: translateX(-50%);
+    } 40% {
+        transform: translateX(-50%);
+    } 45% {
+        transform: translateX(-50%);
+    } 50% {
+        transform: translateX(-50%);
+    } 55% {
+        transform: translateX(0);
+    } 60% {
+        transform: translateX(0);
+    } 65% {
+        transform: translateX(0);
+    } 70% {
+        transform: translateX(0);
+    } 75% {
+        transform: translateX(0);
+    } 80% {
+        transform: translateX(0);
+    } 85% {
+        transform: translateX(0);
+    } 90% {
+        transform: translateX(0);
+    } 95% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(0);
+    }
+}
+
+.container_main {
+    .first_banner {
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+
+        .text_banner,
+        .banner_girl {
+            width: 50%;
+        }
+
+        .text_banner h1 {
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .text_banner h1 span {
+            color: #8176AF;
+        }
+
+        .text_banner p {
+            color: #fff;
+            width: 100%;
+            max-width: 470px;
+            margin-bottom: 25px;
+        }
+
+        .text_banner button {
+            width: 100%;
+            max-width: 200px;
+            height: 45px;
+            border: 0;
+            background: linear-gradient(to right, #8176AF, #C0B7E8);
+            border-radius: 40px;
+            cursor: pointer;
+            position: relative;
+            color: #000;
+            transition: .2s linear;
+        }
+
+        .text_banner button:hover {
+            color: #fff;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .banner_girl {
+            width: 100%;
+            max-width: 400px;
+            border-top-right-radius: 80px;
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 80px;
+            overflow: hidden;
+            background: #00000013;
+            padding: 10px;
+            margin-left: 15px;
+        }
+
+        .banner_girl img {
+            width: 100%;
+            border-top-right-radius: 80px;
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 80px;
+        }
+
+    }
+
+    .call_whatsapp {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        height: 100px;
+        border-radius: 40px;
+        background: radial-gradient(#3a3456, #211E2E);
+        margin-top: 70px;
+        overflow: hidden;
+
+        .carrousel_whatsapp {
+            height: inherit;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+    }
+
+    .call_whatsapp .carrousel_whatsapp div {
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+
+    .call_whatsapp .border {
+        width: 1px;
+        height: 70px;
+        background: #c0b7e848;
+    }
+
+    .call_whatsapp i {
+        margin-right: 10px;
+        font-size: 30px;
+    }
+
+    .call_whatsapp div > span {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .call_whatsapp div > span span:first-child {
+        font-weight: bold;
+    }
+
+    .call_whatsapp div > span span:last-child {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .container_about {
+        margin-top: 60px;
+
+        .introducao {
+            display: flex;
+            justify-content: space-between;
+
+            .title_introducao,
+            .text_introducao {
+                width: 50%;
+                color: #fff;
+            }
+
+            .title_introducao h2 span {
+                font-weight: normal;
+            }
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 55px;
+            color: #fff;
+
+            .second_banner,
+            .about_text {
+                width: 50%;
+            }
+
+            .about_text h2 {
+                margin-bottom: 25px;
+            }
+
+            .about_text h2 span {
+                font-weight: normal;
+            }
+
+            .about_text button {
+                width: 100%;
+                max-width: 200px;
+                height: 45px;
+                border: 0;
+                background: linear-gradient(to right, #8176AF, #C0B7E8);
+                border-radius: 40px;
+                cursor: pointer;
+                position: relative;
+                color: #000;
+                transition: .2s linear;
+                margin-top: 25px;
+            }
+    
+            .about_text button:hover {
+                color: #fff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 50px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .second_banner img {
+                border-top-right-radius: 50px;
+                border-top-left-radius: 200px;
+                border-bottom-right-radius: 200px;
+                border-bottom-left-radius: 50px;
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    }
+
+    .carrousel_products {
+        margin-top: 70px;
+
+        .title_cpf {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 35px;
+        }
+    }
+
+    .last_banner {
+        margin-top: 75px;
+
+        .banner {
+            width: 100%;
+            height: 250px;
+            background: url('../../images/banner_terceiro.png') center no-repeat;
+            background-size: cover;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .banner h3 {
+            color: #fff;
+            font-size: 38px;
+        }
+        
+        .banner p {
+            color: #fff;
+            margin-top: 10px;
+        }
+    }
+
+    .form {
+        margin-top: 70px;
+
+        .container_form {
+            background: radial-gradient(#403A5F, #211E2E);
+            border-radius: 100px;
+            padding: 35px 0;
+
+            .title_form,
+            .cadastre_se {
+                text-align: center;
+            }
+
+            .title_form h2 {
+                color: #fff;
+                font-weight: bold;
+                font-size: 26px;
+            }
+
+            .cadastre_se p {
+                font-size: 25px;
+                color: #fff;
+            }
+
+            .border_form {
+                width: 100%;
+                max-width: 300px;
+                height: 2px;
+                background: linear-gradient(to right, #343045, #C0B7E8, #8176AF, #343045);
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+
+            .title_form {
+                padding: 15px;
+            }
+
+            .inputs_form {
+                width: 100%;
+                max-width: 700px;
+                margin: 25px auto;
+                padding: 15px 20px;
+
+                .full_size input,
+                .min_size input {
+                    border-radius: 20px;
+                    border: 2px solid #fff;
+                    padding-left: 20px;
+                    height: 45px;
+                    margin: 10px 0;
+                    background: transparent;
+                    color: #fff;
+                }
+
+                .full_size input::placeholder,
+                .min_size input::placeholder {
+                    color: #6f6f6f;
+                }
+
+                .full_size input {
+                    width: 100%;
+                }
+
+                .min_size {
+                    display: flex;
+                    width: 100%;
+                }
+
+                .min_size div {
+                    width: 95%;
+                }
+
+                .min_size div:first-child {
+                    margin-right: 5px;
+                }
+
+                .min_size div:last-child {
+                    margin-left: 5px;
+                }
+
+                .min_size div input {
+                    width: 100%;
+                }
+
+                .button_submit {
+                    text-align: center;
+                }
+
+                .btn {
+                    width: 100%;
+                    max-width: 200px;
+                    height: 45px;
+                    border: 0;
+                    background: linear-gradient(to right, #8176AF, #C0B7E8);
+                    border-radius: 40px;
+                    cursor: pointer;
+                    position: relative;
+                    color: #000;
+                    transition: .2s linear;
+                    margin-top: 25px;
+                }
+        
+                .btn:hover {
+                    color: #fff;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 50px;
+                    border-bottom-left-radius: 5px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .first_banner {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .text_banner {
+                width: 100%;
+                text-align: center;
+            }
+
+            .text_banner h1 {
+                font-size: 32px;
+            }
+
+            .text_banner p {
+                display: none;
+            }
+
+            .text_banner button {
+                max-width: 350px;
+                font-size: 17px;
+            }
+
+            .banner_girl {
+                margin-top: -20px;
+                margin-bottom: 25px;
+                width: 100%;
+            }
+        }
+
+        .call_whatsapp .carrousel_whatsapp .border {
+            display: none;
+        }
+
+        .call_whatsapp .carrousel_whatsapp div {
+            width: 50%;
+            justify-content: center;
+        }
+
+        .call_whatsapp .carrousel_whatsapp {
+            width: 200%;
+            transition: transform .4s linear;
+            animation: carrouselContact infinite 5s linear;
+        }
+
+        .text_introducao {
+            display: none;
+        }
+
+        .container_about .introducao .title_introducao {
+            text-align: center;
+            width: 100%;
+        }
+
+        .container_about .about {
+            flex-direction: column;
+        }
+
+        .container_about .about .second_banner {
+            width: 100%;
+            text-align: center;
+        }
+
+        .container_about .about .second_banner img {
+            margin-bottom: 20px;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 25px;
+        }
+
+        .container_about .about .about_text button {
+            max-width: none;
+        }
+
+        .container_about .about .about_text h2 {
+            display: none;
+        }
+
+        .container_about .about .about_text {
+            width: 100%;
+        }
+
+    }
+
+    @media screen and (max-width: 700px) {
+        .last_banner .banner {
+            height: 150px;
+        }
+
+        .last_banner .banner h3 {
+            font-size: 24px;
+        }
+
+        .last_banner .banner p {
+            font-size: 12px;
+        }
+
+        .form .container_form {
+            border-radius: 40px;
+        }
+
+        .form .container_form .inputs_form {
+            .min_size {
+                flex-direction: column;
+            }
+
+            .min_size div {
+                width: 100%;
+            }
+
+            .min_size div:first-child {
+                margin-right: 0;
+            }
+
+            .min_size div:last-child {
+                margin-left: 0;
+            }
+        } 
+
+    }
+
+    @media screen and (max-width: 450px) {
+        .first_banner {
+            .text_banner h1 {
+                font-size: 22px;
+            }
+        }
+        
+        .last_banner {
+            margin-top: 40px;
+        }
+        .last_banner .banner {
+            height: 100px;
+        }
+
+        .last_banner .banner h3 {
+            font-size: 18px;
+        }
+
+        .last_banner .banner p {
+            font-size: 9px;
+        }
+
+        .container_about .about .about_text p {
+            font-size: 14px;
+        }
+    }
+}

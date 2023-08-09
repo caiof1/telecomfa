@@ -1,0 +1,23 @@
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+
+    .container_contact {
+        width: 200px;
+        height: 300px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #fff;
+        color: #fff ;
+        margin: 10px 10px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+}

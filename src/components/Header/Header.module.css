@@ -1,0 +1,123 @@
+.header {
+    width: 100%;
+    height: 15vh;
+
+    .container_header {
+        display: flex;
+        height: inherit;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo span {
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .menu_bar {
+            width: 28px;
+            height: 23px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 11;
+            margin-right: 10px;
+
+            .line1,
+            .line2,
+            .line3 {
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: .2s linear;
+            }
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu li {
+            margin-right: 15px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu li a:hover{
+            color: #8176AF;
+            transition: .2s linear;
+        }
+
+        .menu li button {
+            width: 130px;
+            height: 40px;
+            border-radius: 25px;
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu li button:hover {
+            border-color: #8176AF;
+            color: #8176AF;
+            transition: .2s linear;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .container_header .menu {
+            width: 50%;
+            height: 100vh;
+            position: absolute;
+            transform: translateX(-100%);
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #8176AF;
+            transition: .3s linear;
+            z-index: 10;
+        }
+
+        .container_header .menu li button:hover {
+            border-color: #6a49eb;
+            color: #6a49eb;
+            transition: .2s linear;
+        }
+
+        .container_header .active {
+            .line1 {
+                transform: rotate(-45deg) translate(-8px, 9px);
+            }
+            
+            .line2 {
+                opacity: 0;
+            }
+
+            .line3 {
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+        }
+
+        .container_header .active + .menu {
+            transform: translateX(0);
+        }
+
+        .container_header .menu li:hover{
+            color: #6a49eb;
+            transition: .2s linear;
+        }
+
+        .container_header .menu_bar {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .container_header .menu { 
+            width: 100%;
+        }
+    }
+}
