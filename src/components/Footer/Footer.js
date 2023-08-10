@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.redes}>
-        <a href="">
+        <a href="https://www.facebook.com/profile.php?id=100095501705331" target="_blank">
           <i class="fa-brands fa-facebook"></i>
         </a>
-        <a href="">
+        <a href="https://www.instagram.com/telecomfa/" target="_blank">
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>

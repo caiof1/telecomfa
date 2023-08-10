@@ -27,7 +27,9 @@ const Header = () => {
             <a onClick={() => setActive(false)} href="#form">Cadastro vivo</a>
           </li>
           <li>
-            <button>Nos contate</button>
+            <a href="https://api.whatsapp.com/send/?phone=11960434439&text&type=phone_number&app_absent=0" target="_blank">
+              <button>Nos contate</button>
+            </a>
           </li>
         </ul>
       </nav>
