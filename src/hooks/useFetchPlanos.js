@@ -18,7 +18,7 @@ export const useFetchPlanos = (docCollection) => {
         const fetchDocuments = async () => {
             setLoading(true)
             try {
-                const q = await query(collection(db, docCollection))
+                const q = await query(collection(db, docCollection), orderBy('orderCreate', 'asc'))
 
                 await onSnapshot(q, (querySnapshot) => {
                     setDocuments(

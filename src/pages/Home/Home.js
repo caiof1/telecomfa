@@ -22,32 +22,32 @@ const Home = () => {
   const [numberPhone, setNumberPhone] = useState();
   const [plano, setPlano] = useState();
 
-  const [error, setError] = useState('')
-  const [message, setMessage] = useState('')
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
-  const {searchCEP} = useFetchCEP()
+  const { searchCEP } = useFetchCEP();
 
-  const { insertOrder, loading, acess } = useInsertClient('clients')
+  const { insertOrder, loading, acess } = useInsertClient("clients");
 
-  const {documents} = useFetchPlanos('planosCPF')
-  const {documents: planosPJ} = useFetchPlanos('planosCNPJ')
+  const { documents } = useFetchPlanos("planosCPF");
+  const { documents: planosPJ } = useFetchPlanos("planosCNPJ");
 
   const handleCepChange = async (e) => {
-    setCEP(e.target.value)
+    setCEP(e.target.value);
 
-    if(e.target.value.length >= 8) {
-      const datas = await searchCEP(e.target.value)
+    if (e.target.value.length >= 8) {
+      const datas = await searchCEP(e.target.value);
 
-      setBairro(datas?.bairro)
-      setCity(datas?.localidade)
-      setEndereco(datas?.logradouro)
+      setBairro(datas?.bairro);
+      setCity(datas?.localidade);
+      setEndereco(datas?.logradouro);
     }
-  }
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if(localStorage.getItem("formCreate") !== "true") {
+    if (localStorage.getItem("formCreate") !== "true") {
       const data = {
         name,
         cep,
@@ -56,23 +56,23 @@ const Home = () => {
         city,
         numberResidencia,
         numberPhone,
-        plano
-      }
-  
-      insertOrder(data)
+        plano,
+      };
 
-      setMessage('Seu contato foi enviado com sucesso')
+      insertOrder(data);
+
+      setMessage("Seu contato foi enviado com sucesso");
 
       setTimeout(() => {
-        setMessage('')
+        setMessage("");
       }, 3500);
     } else {
-      setError('Você já enviou o seu contato.')
+      setError("Você já enviou o seu contato.");
       setTimeout(() => {
-        setError('')
+        setError("");
       }, 3500);
     }
-  }
+  };
 
   return (
     <main className={styles.container_main}>
@@ -85,7 +85,9 @@ const Home = () => {
             Para o seu game, ou sua serie. O que você está esperando para
             adquirir a sua vivo fibra?
           </p>
-          <button>Provas sociais</button>
+          <a href="#planos">
+            <button>Planos</button>
+          </a>
         </div>
         <div className={styles.banner_girl}>
           <img src={bannerPrincipal} alt="" />
@@ -144,12 +146,13 @@ const Home = () => {
               sociais para divulgação juntamente com trafego pago, onde estamos
               fazendo anuncio e é provavelmente por esse anuncio que você chegou
               aqui. E você se pergunta “Como posso confiar na Telecom FA” e aqui
-              está a sua resposta. Logo abaixo, temos um link para você ir
-              direto para as provas sociais de outros clientes, onde você poderá
-              consultar e verificar que o que estamos falando é totalmente
-              veridico
+              está a sua resposta. Temos muitos clientes todos os dias que se
+              perguntam isso e a resposta é bem simples, somos parceira vivo e
+              temos provas sociais e acesso a tudo para te convencer disso
             </p>
-            <button>Provas sociais</button>
+            <a href="#form">
+              <button>Entre em contato</button>
+            </a>
           </div>
         </div>
       </section>

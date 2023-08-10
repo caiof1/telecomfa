@@ -3,9 +3,18 @@
     max-width: 1200px;
 }
 
+.carousel {
+    height: 500px;
+    
+    .product_single {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .product {
     width: 100%;
-    min-width: 300px;
+    max-width: 300px;
     height: 450px;
     background: radial-gradient(#433D60, #211E2E);
     border-radius: 40px;
@@ -72,15 +81,6 @@
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 5px;
     }
-}
-
-.inner {
-    display: flex;
-}
-
-.carousel {
-    cursor: grab;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 350px) {
